@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import LinkedIn from '../icons/LinkedIn.astro'
+import SocialPill from '../components/SocialPill.astro'
+import GitHub from '../icons/GitHub.astro';
+import Code from '../icons/Code.astro';
+import ExperienceIcon from '../icons/Experience.astro';
+import Mail from '../icons/Mail.astro';
+import Experience from '../components/Experience.astro'
+import Projects from '../components/Projects.astro'
+import SectionContainer from '../components/Container.astro'
+---
+
+<Layout title="Portfolio Hector Cardona - Desarrollador, Programador Web y Test Engineer"
+description='Desarrollador con 8 años de expreiencia'>
+	<main class="px-4">
+		<SectionContainer class="pt-44 pb-24">
+			
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex justify-center items-center flew-row gap-x-4 pb-6 lg:pb-10">
+				<img 
+				class="block rounded-full size-12 lg:hidden"
+				src="https://avatars.githubusercontent.com/u/42915276?v=4" 
+				alt="Hector Cardona photo" />
+				¡Hey!, soy Hector 
+				<a 
+				href="https://www.linkedin.com/in/h%C3%A9ctor-juli%C3%A1n-cardona-7a24ab177/" 
+				target="_blank" 
+				rel="noopener" 
+				class="flex justify-center">
+					<Badge> Disponible para trabajar </Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl opacity-80 text-wrap">
+				<span>+8 años de experiencia</span> en el mundo del software. <span class="text-yellow-200/90">Desarrollador Web Frontend y Test Automation Engineer con 3 años de experiencia.</span>
+				<span class="text-red-100/90">De Colombia, Pereira 🇨🇴</span>. Especializado en la solución de problemas gracias a mis 3 años como <span>programador competitivo</span>(aunque aún lo hago por hobbie)
+			</h2>
+
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/h%C3%A9ctor-juli%C3%A1n-cardona-7a24ab177/">
+					<LinkedIn class="size-4 md:size-6"/> LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/Hecodes98">
+					<GitHub class="size-4 md:size-6"/> GitHub
+				</SocialPill>
+				<SocialPill href="mailto:hectorjulian98@gmail.com">
+					<Mail class="size-4 md:size-6"/> hectorjulian98@gmail.com
+				</SocialPill>
+			</nav>
+			
+		</SectionContainer>
+		<SectionContainer id="experience">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-4 items-center ">
+				<ExperienceIcon class="size-7"/>
+				Experienca laboral
+			</h2>
+			<Experience/>
+		</SectionContainer>
+		<SectionContainer class="pt-20">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-4 items-center ">
+				<Code class="size-7"/>
+				Proyectos
+			</h2>
+			<Projects/>
+		</SectionContainer>
+	</main>
+</Layout>
+

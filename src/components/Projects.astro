@@ -1,0 +1,51 @@
+---
+const TAGS = {
+    CSHARP: {
+        name : 'CSharp',
+        class: 'bg-[#9b4f96] text-white'
+    },
+    XUNIT: {
+        name: 'xUnit',
+        class: 'bg-black text-white'
+    },
+    SELENIUM: {
+        name: 'Selenium',
+        class: 'bg-[#00ae00ad] text-white'
+    },
+    RESTSHARP: {
+        name: 'RestSharp',
+        class: 'bg-[#000063d6] text-white'
+    }
+}
+
+const PROJECTS = [
+    {
+        title: 'Automatización UI y API - AdvancedMD',
+        description: 'Creación del framework de automatización (UI y API) para la plataforma de telemedicina de AdvancedMD. (Created from scratch)',
+        link: 'https://www.advancedmd.com/patient/',
+        github: '#',
+        image: '/projects/AdvancedMD.webp',
+        tags: [TAGS.CSHARP, TAGS.XUNIT, TAGS.SELENIUM, TAGS.RESTSHARP]
+    }
+]
+---
+{
+
+    PROJECTS.map(({image, title, description, tags})=>(
+        <article>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row mb-4">
+                {tags.map(tag=>(
+                    <span class={`${tag.class} flex gap-x-2 rounded-full text-sm py-1 px-2 hover:scale-110 hover:bg-white/10 transition`}>
+                        <li>{tag.name}</li>
+                    </span>
+                ))}    
+            </ul>    
+            <img
+                class="rounder shadow-2xl shadow-white/10" 
+                src={image} alt={`Captura de pantalla del proyecto ${image}`}/>
+        </article>
+    ))
+
+}

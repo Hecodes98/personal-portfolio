@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "../components/ExperienceItem.astro";
+
+const EXPERIENCE = [
+    {
+        date: "Actualmente",
+        title: "Test Automation Engineer SSr en Globant",
+        description:
+            "Encargado de la creación de Frameworks de automatización de aplicaciones Web, APIs o Mobile Apps",
+        link: "#",
+    },
+    {
+        date: "Diciembte 2021",
+        title: "Web UI Developer Jr Adv en Globant",
+        description:
+            "Encargado de la creación de código para las UIs de diferentes plataformas, enfocado en el desarrollo de aplicaciones web con HTML, CSS, JavaScript, React, Next.js",
+    },
+    {
+        date: "Junio 2019",
+        title: "Participante en pruebas regionales ICPC",
+        description:
+            "Participé en pruebas regionales de programación competitiva tipo ICPC siendo integrante de uno de los dos equipos en mi universidad que lograron clasificar, encargado de solucionar problemas planteados usando Estructuras de datos, algoritmos, matematica, etc. ",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+    {EXPERIENCE.map((experience) => <ExperienceItem {...experience} />)}
+</ol>
